@@ -1,0 +1,83 @@
+body{
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0;
+    scrollbar-base-color: black;
+}
+.description{
+    color: whitesmoke;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.block{
+    margin-top: 5vh;
+    background-color: rgba(255, 255, 255, 0.27);
+    border-radius: 15px;
+    width: 100%;
+    backdrop-filter: blur(2px);
+}
+
+.who{
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
+    width: 25vw;
+    border-radius: 15px;
+    margin-top: 2vw;
+    transition-duration: 0.2s;
+}
+
+.who:hover{
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.75);
+    transition-duration: 0.2s;
+    width: 27vw;
+}
+
+.icon_container{
+    display: flex;
+    width: 15vw;
+    margin: auto auto 2vh auto;
+    background-color: rgba(255, 255, 255, 0.47);
+    border-radius: 15px;
+    transition-duration: 0.5s;
+}
+
+.icon_container:hover{
+    width: 20vw;
+    transition-duration: 0.5s;
+}
+
+.icon{
+    margin: 0.5vw;
+    flex: 1;
+    width: 3px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.normal_margin{
+    margin-left: 5vw;
+}
+
+#body{
+    transition: 0.1s;
+    animation : enter 0.3s;
+}
+
+@keyframes enter {
+    0%{
+        margin: -100vh -100vh 0 -100vh;
+    }
+    100%{
+
+    }
+
+}
+
+/*隐藏滚动条
+注：此方法兼容性不好，不建议使用
+*/
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+

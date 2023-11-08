@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta name="keywords" content="个人空间, Apricityx">
+    <meta charset="UTF-8">
+    <title>个人空间</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Navigation2.css">
+</head>
+<body style="user-select:none;">
+<div class="Navigation">
+
+    <!-- 按钮 -->
+    <a class="button" target="myIframe" href="iframe/Home.html">
+        <p class="description">HOME</p>
+    </a>
+
+    <!-- 按钮 -->
+    <a class="button" target="myIframe" href="iframe/Blog.html">
+        <p class="description">Blogs</p>
+    </a>
+
+    <!-- 按钮 -->
+    <a class="button" target="myIframe" href="iframe/introduction.html">
+        <p class="description">Introduction</p>
+    </a>
+
+    <!-- 按钮 -->
+    <a class="button" target="myIframe" href="iframe/About.html">
+        <p class="description">About</p>
+    </a>
+</div>
+
+<!-- 主要界面 -->
+<iframe src="iframe/Home.html" name="myIframe" class="main_body"></iframe>
+
+
+
+<!-- 全屏显示图片 -->
+
+<div style="color: rgba(0,0,0,0.93);width: 100vw;height: 100vh;position: fixed;backdrop-filter: blur(5px);transition: 0.5s;margin-top: -200vh;z-index: 999" id="pic1" onclick="document.getElementById('pic1').style.margin = '-200% auto auto auto'">
+    <img src="./img/Wechat.webp" class="big_img" alt="" id="imgpic1">
+</div>
+<script>
+    //定义sleep函数
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+</script>
+</body>
+</html>

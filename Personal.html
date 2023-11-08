@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta name="keywords" content="个人空间, Apricityx">
+    <meta charset="UTF-8">
+    <title>个人空间</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Navigation2.css">
+</head>
+<body>
+<div class="Navigation">
+
+    <!-- 按钮 -->
+    <div class="button" onclick="Iframe_switch('iframe/Home.html')">
+        <p class="description">HOME</p>
+    </div>
+
+    <!-- 按钮 -->
+    <div class="button" onclick="Iframe_switch('iframe/Blog.html')">
+        <p class="description">Blogs</p>
+    </div>
+
+    <!-- 按钮 -->
+    <div class="button" onclick="Iframe_switch('iframe/introduction.html')">
+        <p class="description">Introduction</p>
+    </div>
+
+    <!-- 按钮 -->
+    <div class="button" onclick="document.getElementById('myIframe').src = 'iframe/About.html'">
+        <p class="description">About</p>
+    </div>
+</div>
+
+<!-- 主要界面 -->
+<iframe src="iframe/Home.html" id="myIframe" class="main_body"></iframe>
+
+
+
+<!-- 全屏显示图片 -->
+
+<div style="color: rgba(0,0,0,0.93);width: 100vw;height: 100vh;position: fixed;backdrop-filter: blur(5px);transition: 0.5s;margin-top: -200vh;z-index: 999" id="pic1" onclick="document.getElementById('pic1').style.margin = '-100% auto auto auto'">
+    <img src="./img/Wechat.webp" class="big_img" alt="" id="imgpic1">
+</div>
+<script>
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    function Iframe_switch(myIframe){
+        var iframe = document.getElementById('myIframe');
+        iframe.contentWindow.document.getElementById('body').style.margin = '100vh 0 0 0';
+        sleep(300).then(() => {
+            document.getElementById('myIframe').src = myIframe;
+        });
+    }
+
+</script>
+</body>
+</html>

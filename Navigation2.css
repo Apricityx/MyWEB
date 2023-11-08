@@ -1,0 +1,64 @@
+.Navigation{
+    margin-top: 10vh;
+    background-color: rgba(255, 255, 255, 0.48);
+    overflow: hidden;
+    position: fixed;
+    width: 17vw;
+    height: fit-content;
+    border-radius: 15px;
+    z-index: 1;
+    transition-duration: 0.5s;
+    margin-left: 1vw;
+    padding-bottom: 2vh;
+}
+
+/*
+.Navigation:hover{
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 15vw;
+    height: 105%;
+    z-index: 1;
+    margin-top: 0;
+    margin-left: -0.5vw;
+}
+*/
+
+.button{
+    margin-left: 2vw;
+    height: 5%;
+    width: 60%;
+    color: white;
+    display: flex;
+    background: linear-gradient(to right, transparent 50%, white 50%) 10% 0;
+    background-size: 200%;
+    transition: color 0.1s , background-position 0.5s;
+    cursor:pointer;
+    margin-top: 2vw;
+    text-decoration:none;
+}
+
+.button:hover{
+    color: black;
+    background-position: -100% 0;
+    transition: color 0.1s, background-position 0.5s;
+}
+
+.button:active{
+    color: white;
+    background-position: 200% 0;
+    transition: 0.5s;
+}
+.description{
+    align-self: center;
+    margin-left: 1vw;
+    font-size: 1vw;
+    color: inherit; /*继承父元素*/
+    transition-duration: 0.5s;
+}
+.Navigation:hover{
+    backdrop-filter: blur(5px);
+    transition-duration: 0.5s;
+}
